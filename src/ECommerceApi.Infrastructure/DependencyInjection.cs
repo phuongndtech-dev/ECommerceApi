@@ -1,12 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
+using ECommerceApi.Infrastructure.Data;
+using ECommerceApi.Infrastructure.Services;
 
 namespace ECommerceApi.Infrastructure
 {
-    internal class DependencyInjection
+    public static class DependencyInjection
     {
+        public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+        {
+            // Database
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+
+            // Services
+            services.AddScoped<TokenService>();
+
+            return services;
+        }
     }
 }

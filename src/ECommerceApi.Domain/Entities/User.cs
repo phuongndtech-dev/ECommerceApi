@@ -1,12 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ECommerceApi.Domain.Enums;
 
 namespace ECommerceApi.Domain.Entities
 {
-    internal class User
+    public class User : BaseEntity
     {
+        public string Email { get; set; } = string.Empty;
+        public string PasswordHash { get; set; } = string.Empty;
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public UserRole Role { get; set; } = UserRole.Customer;
+        public bool IsEmailConfirmed { get; set; } = false;
+        public bool IsActive { get; set; } = true;
+        public DateTime? LastLoginAt { get; set; }
+
+        // Navigation properties
+        public virtual ICollection<Product> Products { get; set; } = new List<Product>();
+
+        // Domain methods
+        public string GetFullName() => $"{FirstName} {LastName}".Trim();
+
+        public void UpdateLastLogin()
+        {
+            LastLoginAt = DateTime.UtcNow;
+            UpdatedAt = DateTime.UtcNow;
+        }
+
+        public bool IsInRole(UserRole role) => Role == role;
     }
 }
