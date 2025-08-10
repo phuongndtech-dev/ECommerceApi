@@ -17,8 +17,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{22DBF531
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceApi.UnitTests", "tests\ECommerceApi.UnitTests\ECommerceApi.UnitTests.csproj", "{5D58CD1A-00B6-433C-B876-79541CFF4324}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceApi.IntegrationTests", "tests\ECommerceApi.IntegrationTests\ECommerceApi.IntegrationTests.csproj", "{072AE20A-60FC-48F2-B1DC-158A7E3F464E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{629748D5-E3E1-4DEA-BF80-28F04AB293A0}"
 	ProjectSection(SolutionItems) = preProject
 		architecture.md = architecture.md
@@ -56,10 +54,6 @@ Global
 		{5D58CD1A-00B6-433C-B876-79541CFF4324}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D58CD1A-00B6-433C-B876-79541CFF4324}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D58CD1A-00B6-433C-B876-79541CFF4324}.Release|Any CPU.Build.0 = Release|Any CPU
-		{072AE20A-60FC-48F2-B1DC-158A7E3F464E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{072AE20A-60FC-48F2-B1DC-158A7E3F464E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{072AE20A-60FC-48F2-B1DC-158A7E3F464E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{072AE20A-60FC-48F2-B1DC-158A7E3F464E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,7 +64,6 @@ Global
 		{102120D1-8223-48D1-9114-93D809358FD8} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{722004C1-8F0A-4BAF-8027-D72089FD6C67} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{5D58CD1A-00B6-433C-B876-79541CFF4324} = {22DBF531-AA3F-41EF-8C98-3729DEB5DB30}
-		{072AE20A-60FC-48F2-B1DC-158A7E3F464E} = {22DBF531-AA3F-41EF-8C98-3729DEB5DB30}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {701C9FDA-4841-497D-AD4A-70D1B551F390}
