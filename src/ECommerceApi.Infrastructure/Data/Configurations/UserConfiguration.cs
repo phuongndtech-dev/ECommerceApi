@@ -1,7 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ECommerceApi.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ECommerceApi.Domain.Entities;
-using ECommerceApi.Domain.Enums;
 
 namespace ECommerceApi.Infrastructure.Data.Configurations
 {

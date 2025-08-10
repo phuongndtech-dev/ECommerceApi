@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using ECommerceApi.Domain.Enums;
+﻿using ECommerceApi.Domain.Enums;
 
 namespace ECommerceApi.Domain.Entities
 {
@@ -15,10 +13,8 @@ namespace ECommerceApi.Domain.Entities
         public bool IsActive { get; set; } = true;
         public DateTime? LastLoginAt { get; set; }
 
-        // Navigation properties
         public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 
-        // Domain methods
         public string GetFullName() => $"{FirstName} {LastName}".Trim();
 
         public void UpdateLastLogin()

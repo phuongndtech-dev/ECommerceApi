@@ -11,15 +11,12 @@ namespace ECommerceApi.Domain.Entities
         public int Stock { get; set; }
         public string Category { get; set; } = string.Empty;
         public bool IsActive { get; set; } = true;
-        public string Sku { get; set; } = string.Empty; // Stock Keeping Unit
+        public string Sku { get; set; } = string.Empty;
 
-        // Foreign key
         public int CreatedByUserId { get; set; }
 
-        // Navigation property
         public virtual User CreatedBy { get; set; } = null!;
 
-        // Domain methods
         public bool IsInStock() => Stock > 0 && IsActive;
 
         public bool CanPurchase(int quantity) => IsInStock() && Stock >= quantity;

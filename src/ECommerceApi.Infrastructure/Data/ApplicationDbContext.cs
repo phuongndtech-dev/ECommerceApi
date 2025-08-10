@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ECommerceApi.Domain.Entities;
+﻿using ECommerceApi.Domain.Entities;
 using ECommerceApi.Infrastructure.Data.Configurations;
+using Microsoft.EntityFrameworkCore;
 
 namespace ECommerceApi.Infrastructure.Data
 {

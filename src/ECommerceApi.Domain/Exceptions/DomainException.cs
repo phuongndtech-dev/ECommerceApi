@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ECommerceApi.Domain.Exceptions
+﻿namespace ECommerceApi.Domain.Exceptions
 {
     public class DomainException : Exception
     {
