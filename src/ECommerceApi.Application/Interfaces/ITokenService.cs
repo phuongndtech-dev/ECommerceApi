@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ECommerceApi.Domain.Entities;
+using System.Security.Claims;
 
 namespace ECommerceApi.Application.Interfaces
 {
-    internal interface ITokenService
+    public interface ITokenService
     {
+        string GenerateJwtToken(User user);
+        ClaimsPrincipal? ValidateToken(string token);
+        int? GetUserIdFromToken(string token);
+        string? GetEmailFromToken(string token);
     }
 }

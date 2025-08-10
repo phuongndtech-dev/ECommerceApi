@@ -3,9 +3,9 @@ using ECommerceApi.Application.DTOs.Products;
 
 namespace ECommerceApi.Application.Validators
 {
-    public class CreateProductDtoValidator : AbstractValidator<CreateProductDto>
+    public class UpdateProductDtoValidator : AbstractValidator<UpdateProductDto>
     {
-        public CreateProductDtoValidator()
+        public UpdateProductDtoValidator()
         {
             RuleFor(x => x.Name)
                 .NotEmpty().WithMessage("Product name is required")

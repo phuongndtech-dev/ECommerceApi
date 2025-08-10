@@ -13,4 +13,9 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ECommerceApi.Domain\ECommerceApi.Domain.csproj" />
+    <ProjectReference Include="..\ECommerceApi.Infrastructure\ECommerceApi.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

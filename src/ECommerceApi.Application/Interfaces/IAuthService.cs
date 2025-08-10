@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ECommerceApi.Application.DTOs.Auth;
+using ECommerceApi.Application.DTOs.Common;
 
 namespace ECommerceApi.Application.Interfaces
 {
-    internal interface IAuthService
+    public interface IAuthService
     {
+        Task<ApiResponse<LoginResponseDto>> LoginAsync(LoginDto loginDto);
+        Task<ApiResponse<UserDto>> RegisterAsync(RegisterDto registerDto);
+        Task<ApiResponse<string>> LogoutAsync(int userId);
+        Task<ApiResponse<UserDto>> GetUserProfileAsync(int userId);
     }
 }
